@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--
+Author: Jeferson Luis Molinari
+Student No: A01019366
+-->
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="icon" href="images/favicon.ico">
+    <title>_C: Tutorial</title>
+    <script>
+        function myFunction() {
+            var x = document.getElementById("hide-menu");
+            if (x.className.indexOf("show") == -1) {
+                x.className += " show";
+            } else { 
+                x.className = x.className.replace(" show", "");
+            }
+        }
+    </script>
+    <script>
+        window.onscroll = function() {scrollFix()};
+        function scrollFix() {
+            if (document.body.scrollTop >450 || document.documentElement.scrollTop >450) {
+                document.getElementById("nav_menu").className = "fix";
+                document.getElementById("scroll_gap").className = "scroll_gap";
+            } else {
+                document.getElementById("nav_menu").className = "";
+                document.getElementById("scroll_gap").className = "";
+            }
+        } 
+    </script>
+    <script>
+        function accordionFunc() {
+            var x = document.getElementById("accordion");
+            if (x.className.indexOf("show") == -1) {
+                x.className += " show";
+                x.previousElementSibling.className += " acc_hover";
+            } else { 
+                x.className = x.className.replace(" show", "");
+                x.previousElementSibling.className = 
+                x.previousElementSibling.className.replace(" acc_hover", "");
+            }
+        }
+    </script>
+</head>
+<body>
+    <div id="wrapper">
+        <header>
+            <p id="text_header">_coding<br> _from<br> _scratch</p>
+            <form>
+                <input id="search" type="text" name="search" placeholder="Search..">
+            </form>
+        </header>
+        <div id="nav_menu">
+            <nav>
+                <ol>
+                    <li class="navlist"><a href="index.html" class="navigation_link">Home</a></li>
+                    <li class="navlist hide-small"><a href="first_step.html" class="navigation_link">first step</a></li>
+                    <li class="navlist hide-small"><a href="what_learn.html" class="navigation_link">what to learn</a></li>
+                    <li class="navlist hide-small">
+                        <div class="dropdown">
+                            <div class="navigation_link dropbtn">tutorials</div>
+                            <div class="dropdown-content">
+                                <a href="tut_web.html">Web</a>
+                                <a href="tut_software.html">Software</a>
+                                <a href="tut_mobile.html">Mobile</a>
+                                <a href="tut_game.html">Game</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="navlist hide-small"><a href="contact.html" class="navigation_link">contact</a></li>
+                    <li class="navlist hide-small"><a href="about_us.html" class="navigation_link">about us</a></li>
+                    <li class="navlist hide-large btn-right"><a href="javascript:void(0)" class="navigation_link" onclick="myFunction()">&#9776;</a></li>
+                </ol>
+                <ol id="hide-menu" class="hide hide-large">
+                    <li class="nav_colapse"><a href="first_step.html" class="navigation_link">first step</a></li>
+                    <li class="nav_colapse"><a href="what_learn.html" class="navigation_link">what to learn</a></li>
+                    <li class="nav_colapse">
+                        <div class="navigation_link dropbtn" onclick="accordionFunc()">tutorials</div>
+                        <div id="accordion" class="hide">
+                            <a href="tut_web.html" class="navigation_link acc_bk">Web</a>
+                            <a href="tut_software.html" class="navigation_link acc_bk">Software</a>
+                            <a href="tut_mobile.html" class="navigation_link acc_bk">Mobile</a>
+                            <a href="tut_game.html" class="navigation_link acc_bk">Game</a>
+                        </div>
+                    </li>
+                    <li class="nav_colapse"><a href="contact.html" class="navigation_link">contact</a></li>
+                    <li class="nav_colapse"><a href="about_us.html" class="navigation_link">about us</a></li>
+                </ol>
+            </nav>
+        </div>
+        <div id="scroll_gap"></div>
+        <main>
+            <article>
+                <h1>_Software/OS Development</h1>
+            </article>
+            <article>
+                <div class="flex-50">
+                  <a href="#">
+                   <section class = "tutorial">
+                    <div class="tut_logo">
+                        <img alt="C logo" src="images/c-logo.png">
+                        </div>
+                    <div class="tut_desc">
+                        <h3>C</h3>
+                        <p>C language from beginner to advanced level</p>
+                        <div class="button_box">BEGIN</div>
+                    </div>
+                </section>
+                </a>
+                </div>
+                <div class="flex-50">
+                  <a href="#">
+                   <section class = "tutorial">
+                    <div class="tut_logo">
+                       <br>
+                        <img alt="GO logo" src="images/go-logo.jpg">
+                        </div>
+                    <div class="tut_desc">
+                        <h3>GO</h3>
+                        <p>Learn the programming language used in Docker - Go</p>
+                        <div class="button_box">BEGIN</div>
+                    </div>
+                </section>
+                </a>
+                </div>
+            </article>
+            <article>
+                <div class="flex-50">
+                  <a href="#">
+                   <section class = "tutorial">
+                    <div class="tut_logo">
+                        <img alt="Ruby logo" src="images/ruby-logo.png"/>
+                        </div>
+                    <div class="tut_desc">
+                        <h3>Ruby</h3>
+                        <p>Learn one of the most beautiful programming languages</p>
+                        <div class="button_box">BEGIN</div>
+                    </div>
+                </section>
+                </a>
+                </div>
+                <div class="flex-50">
+                  <a href="#">
+                   <section class = "tutorial">
+                    <div class="tut_logo">
+                        <img alt=".NET logo" src="images/microsoft_net-logo.png">
+                        </div>
+                    <div class="tut_desc">
+                        <h3 class="title_tut">.NET</h3><p>Begin your enterprise programming career with .net</p>
+                        <div class="button_box">BEGIN</div>
+                    </div>
+                </section>
+                </a>
+                </div>
+            </article>
+        </main>
+        <footer>
+            <div class= "flex-item" >
+                <ul>
+                    <li class="site_map"><a href="contact.html">Contact</a></li>
+                    <li class="site_map"><a href="about_us.html">About us</a></li>
+                    <li class="site_map"><a href="tut_web.html">Tutorials</a></li>
+                    <li class="site_map"><a href="first_step.html">First Step</a></li>
+                    <li class="site_map"><a href="what_learn.html">What to Learn</a></li>
+                    <li class="site_map"><a href="#">Terms of Service</a></li>
+                </ul>
+            </div>
+            <div class= "flex-item">
+                <div>
+                    <p class="social">Follow us</p>
+                    <a href="#" class="fa fa-facebook"></a>
+                    <a href="#" class="fa fa-twitter"></a>
+                    <a href="#" class="fa fa-youtube"></a>
+                </div>
+            </div>
+            <div class= "flex-item">
+                <p class="footer_right">Keep updated with new content.</p>
+                <form>
+                    <input id="subscribe" type="text" name="search" placeholder="Enter your Email . . .">
+                    <br><br>
+                    <input type="submit" value="Subscribe" class="subscribe">
+                </form>
+            </div>
+        </footer>
+    </div> 
+</body>
+</html>

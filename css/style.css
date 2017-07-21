@@ -1,0 +1,724 @@
+@import url('https://fonts.googleapis.com/css?family=Allerta|Allerta+Stencil|Montserrat:400,900|Open+Sans');
+
+/*========================GENERAL RULES===============================*/
+
+* {
+    box-sizing: border-box;
+}
+
+
+body{
+	font-family: Allerta, sans-serif;
+	font-weight: normal;
+	background: #0c3c4b;
+    margin: 0px;
+}
+
+h1 {
+    font-family: "Allerta Stencil", sans-serif;
+	color:#0c3c4b;
+    font-weight: 200;
+    text-align: left;
+	text-transform:uppercase;
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+}
+
+p {
+	font-family: "Open Sans", sans-serif;
+    padding-left: 10px;
+}
+
+hr {
+    background-color: #28CAFB;
+    width: 90%;
+    max-width: 900px;
+    float: left;
+    height: 3px;
+    border: none;
+}
+
+ul {
+	list-style: none;
+    overflow: hidden;
+}
+
+.exterenal_link:hover {
+    color: #666666;
+}
+
+img {
+    max-width:100%;
+    height:auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    opacity: 1.0;
+    filter: alpha(opacity=100); /* For IE8 and earlier */
+}
+
+figcaption{
+    text-align: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    color: #666666;
+}
+
+img:hover {
+    opacity: 0.5;
+    filter: alpha(opacity=50); /* For IE8 and earlier */
+}
+
+a{
+	text-decoration:none;
+	color: inherit;
+}
+
+
+/*===============WRAPPER========================= */
+
+#wrapper {
+    background-color: #ffffff;
+    width: 100%;
+    height: 100%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    top: 0;
+    overflow:visible;
+}
+
+/*===============HEADER========================= */
+
+
+header {
+    width: 100%;
+    height: 450px;
+    display: block;
+    text-align: center;
+    color: white;
+    margin-top: 0px;
+    font-family: "Allerta Stencil", sans-serif;
+	font-size: 50px;
+	text-align:center;
+    vertical-align: middle;
+	text-transform: uppercase;
+	color: white;
+    background: #33cccc;
+    background-image: url(../images/background.jpg);
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#text_header {
+    font-family: inherit;
+    display: inline-block;
+    margin: 80px 0px 0px 0px;
+    border: solid;
+    padding: 5px;
+    border-width: 6px;
+}
+
+header input[type=text] {
+    margin-top: 30px;
+    width: 150px;
+    border: 2px solid #ffffff;
+    border-radius: 6px;
+    font-family: allerta, sans-serif;
+    font-size: 16px;
+    background-color: white;
+    background-image: url("../images/search.png");
+    background-position: 10px 10px; 
+    background-repeat: no-repeat;
+    padding: 12px 20px 12px 40px;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+}
+
+header input[type=text]:focus {
+    width: 1000px;
+    border: 2px solid #33cccc;
+}
+
+
+
+/*===============NAVIGATION========================= */
+
+nav {
+    width: 100%;
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 50px;
+    text-align: center;
+    /*position: fixed; */
+    /*top: 0px; */
+    z-index: 1000;
+    font-family: "Allerta Stencil", sans-serif;
+    font-size: 18px;
+	text-align:center;
+}
+
+#nav_menu {
+    background-color: #28cafb;
+    height: 50px;
+    width: 100%;;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.fix {
+  position: fixed!important;
+  top: 0!important;
+  left: 0!important;
+  right: 0!important;
+  margin: 0!important;
+}
+
+.scroll_gap {
+    height: 50px;
+}
+
+nav ol {
+	list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navlist{
+	text-transform:uppercase;
+	float:left;
+}
+
+.nav_colapse{
+    text-transform: uppercase;
+    width: 100%;
+    background: #28cafb;
+    float: left;
+}
+
+.navigation_link:link, .navigation_link:visited, #current_page {
+    background-color: inherit;
+	color: inherit;
+    padding: 0px 25px;
+    width: 100%;
+    text-align: center;
+    display: inline-block;
+    /* border
+    border-right: solid 0.5px #2db7b7; */
+}
+
+#current_page {
+    background-color: inherit;
+	color: white;
+    cursor:pointer;
+}
+
+.navigation_link:hover, #current_page:hover, .dropdown:hover, .acc_hover {
+    background-color:#52d4fb ;
+}
+
+.hide{
+    display:none!important;
+}
+
+.show{
+    display:block!important;
+}
+
+@media (max-width:900px) {
+    .hide-small{
+        display:none!important;
+    }
+}
+
+@media (min-width:900px) {
+    .hide-large{
+        display:none!important;
+    }
+}
+
+.btn-right {
+    float:right!important;
+}
+
+
+/* Style The Dropdown Button */
+.dropbtn {
+    padding: 0px 25px;
+    cursor: pointer;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 150px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+    color: black;
+    padding: 0px;
+    text-decoration: none;
+    display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {
+    background-color: #f1f1f1}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+    width: 150px;
+}
+
+.acc_bk{
+    background-color: #68d9fc!important;
+}
+
+.acc_bk:hover{
+    background: #52d4fb!important;
+}
+
+/*===============MAIN========================= */
+
+
+main {
+    display: block;
+    padding: 10px 20px;
+    margin: 0px 0px;
+}
+
+.areas {
+    display: block;
+    padding: 10px 20px;
+    margin: 0px 0px;
+}
+
+article {
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+    display: -webkit-flex;
+    display: flex;
+}
+
+.flex-50 {
+    width:50%;
+    margin: 5px;
+    
+}
+
+.tutorial {
+    box-sizing:content-box;
+    background: #ffffff;
+    border: solid 2px #0c3c4b;
+    border-radius: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    height: 400px;
+    width: 300px;
+    cursor: pointer;
+}
+
+
+.tut_logo{
+    border-top-left-radius: 18px;
+    border-top-right-radius: 18px;
+    height: 50%;
+}
+
+.tut_logo img{
+    border-top-left-radius: 18px;
+    border-top-right-radius: 18px;
+}
+
+.tut_desc{
+    text-align: center;
+    color: #ffffff;
+    background-color: #0c3c4b;
+    padding: 15px;
+    border-bottom-left-radius: 18px;
+    border-bottom-right-radius: 18px;
+    height: 50%;
+    border: 0px;
+    margin: 0px;
+}
+
+main h3{
+    font-size: 30px;
+    margin: 0px;
+}
+
+.button_box{
+    font-family: "Open Sans";
+    height: 40px;
+    width: 120px;
+    border-radius: 20px;
+    font-size: 18px;
+    color: white;
+    line-height: 33px;
+    margin-left: auto;
+    margin-right: auto;
+    border: solid #14657d 2px;
+    background-color: #0099ff;
+    background: -webkit-linear-gradient(top left, #0099ff -20%, #33cccc 100%); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(top left, #0099ff -20%, #33cccc 100%); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(top left, #0099ff -20%, #33cccc 100%); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(to top left, #0099ff -20%, #33cccc 100%);
+}
+
+.banner{
+    background-image: url(../images/bg-banner.jpg);
+    background-size: 600px 267px;
+    height: 400px;
+    padding: 100px 0px; 
+}
+
+.banner_tit {
+    display: block;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+    display: block;
+    color: #ffffff;
+}
+
+h2{
+    font-family: "Montserrat", sans-serif;
+    font-size: 50px;
+    font-weight: 900;
+    text-align: center;
+    padding: 0px;
+    margin: 0px 0px 30px 0px;
+}
+
+.banner_text{
+    font-weight: 400;
+    font-size: 25px;
+    text-align: center;
+    padding: 0px;
+    margin: 0px;
+    display: block;
+    width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+
+.testimonials{
+    background: #f6f8f8;
+    min-height:400px;
+}
+
+.container {
+    border: 2px solid #ccc;
+    background-color: #eeeeee;
+    border-radius: 5px;
+    padding: 16px;
+    margin: 16px 0px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.container::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.container img {
+  float: left;
+  margin-right: 20px;
+  border-radius: 50%;
+}
+
+.container span {
+  font-size: 20px;
+  margin-right: 15px;
+}
+
+@media (max-width: 500px) {
+  .container {
+      text-align: center;
+  }
+  .container img {
+      margin: auto;
+      float: none;
+      display: block;
+  }
+}
+/*================TABLE=========================*/
+
+table{
+	border-collapse:collapse;
+	width: 100%;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+td {
+    border-collapse: collapse;
+    font-size: 18px;
+    padding-left: 20px;
+}
+
+tr:nth-child(even){
+    background-color: #beeffd
+}
+
+.border_tb {
+    border: solid 2px #beeffd;
+	width: 500px;
+	margin-left:auto;
+	margin-right:auto;
+    border-radius: 20PX;
+}
+
+th{
+    font-size:20px;
+}
+
+
+/*=================FORM========================= */
+
+
+
+.article {
+    display: block;
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+    display: block;
+}
+
+
+.form_contact{
+    max-width: 1000px;
+}
+
+main label {
+    font-weight: bold;
+    color:#187996;
+    background-color: #e9f9fe;
+    border: solid #20a1c8 1px;
+    border-radius: 2px;
+    padding: 0px 5px;
+    display: inline-block;
+    width: 100px;
+}
+
+main fieldset {
+    border-color: #24b5e1;
+    border-radius: 10px;
+}
+
+main legend {
+    font-family: "Allerta Stencil", sans-serif;
+	color:#0c3c4b;
+    font-weight: 200;
+    margin: 10px;
+    padding: 20px 5px;
+    font-size: 30px;
+}
+
+main .contactinfo {
+    width: 140px;
+    padding: 5px;
+    border-radius: 10px;
+}
+
+main input, main select {
+	margin-bottom:10px;
+    padding: 9px;
+    border-radius: 10px;
+}
+
+main input{
+    width: 400px;
+}
+
+main textarea{
+	width:100%;	
+	min-height:150px;
+    margin: 10px 0px;
+}
+
+.button {
+    font-size: 20px;
+    width: 250px;
+    margin-right: 15px;
+    color: white;
+    border-radius: 5px;
+    border: solid #14657d 2px;
+    background-color: #0099ff;
+    background: -webkit-linear-gradient(top left, #0099ff -20%, #33cccc 100%); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(top left, #0099ff -20%, #33cccc 100%); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(top left, #0099ff -20%, #33cccc 100%); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(to top left, #0099ff -20%, #33cccc 100%);
+}
+
+.button:hover{
+    border: solid #24b5e1 2px;
+}
+
+.button:active {
+    border: solid #14657d 2px;
+    background-color: #33cccc;
+    background: -webkit-linear-gradient(top left, #33cccc -20%, #0099ff 100%); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(top left, #33cccc -20%, #0099ff 100%); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(top left, #33cccc -20%, #0099ff 100%); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(to top left, #33cccc -20%, #0099ff 100%);
+}
+
+.text{
+    width: 70%;
+    margin-top: 40px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/*===============FOOTER========================= */
+
+
+footer {
+    color: white;
+    width: 100%;
+    height: 250px;
+    text-align: center;
+    background-color: #0c3c4b;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-justify-content: center;
+    justify-content: center;
+}
+
+.flex-item {
+    width:33.33333%;
+}
+
+footer ul {
+    margin: 0px;
+    padding: 0px;
+    padding-top: 15px;
+}
+
+.site_map {
+    text-align: left;
+    font-size: 16px;
+    padding: 15px 0px 0px 45px;
+    margin: 0px;
+}
+
+.social {
+    font-size: 35px;
+    margin-top: 60px;
+    margin-bottom: 10px;
+    padding: 0px;
+}
+
+.fa {
+  padding: 20px;
+  font-size: 25px!important;
+  width: 65px;
+  text-align: center;
+  text-decoration: none;
+  margin: 0px 2px;
+  border-radius: 50%;
+}
+
+.fa-facebook {
+  background: #0c3c4b;
+  color: white;
+}
+
+.fa-twitter {
+  background: #0c3c4b;
+  color: white;
+}
+
+.fa-youtube {
+  background: #0c3c4b;
+  color: white;
+}
+
+.fa-facebook:hover {
+    background: #3B5998;
+    color: #ffffff;
+}
+
+.fa-twitter:hover {
+  background: #55ACEE;
+  color: #ffffff;
+}
+
+.fa-youtube:hover {
+  background: #bb0000;
+  color: #ffffff;
+}
+
+footer input[type=text] {
+    margin-top: 0px;
+    width: 90%;
+    max-width: 250px;
+    border: 2px solid #ffffff;
+    border-radius: 6px;
+    font-family: allerta, sans-serif;
+    font-size: 14px;
+    background-color: white;
+    padding: 12px 5px 12px 5px;
+}
+
+.footer_right{
+    margin-top: 60px;
+    padding: 0px;
+    font-size: 19px;
+}
+
+.subscribe {
+    width: 90%;
+    max-width: 250px;
+    font-size: 18px;
+    color: white;
+    border-radius: 6px;
+    border: solid #14657d 2px;
+    background-color: #0099ff;
+    background: -webkit-linear-gradient(top left, #0099ff -20%, #33cccc 100%); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(top left, #0099ff -20%, #33cccc 100%); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(top left, #0099ff -20%, #33cccc 100%); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(to top left, #0099ff -20%, #33cccc 100%);
+}
+
+.subscribe:hover, .button_box:hover{
+    border-color: #24b5e1;
+}
+
+.subscribe:active, .button_box:active {
+    border-color: #14657d;
+    background-color: #33cccc;
+    background: -webkit-linear-gradient(top left, #33cccc -20%, #0099ff 100%); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(top left, #33cccc -20%, #0099ff 100%); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(top left, #33cccc -20%, #0099ff 100%); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(to top left, #33cccc -20%, #0099ff 100%);
+}

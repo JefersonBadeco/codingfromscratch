@@ -1,0 +1,11 @@
+{
+  "name": "my_website",
+  "version": "1.0.0",
+  "description": "My firdt website",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Jeferson Molinari",
+  "license": "ISC"
+}
